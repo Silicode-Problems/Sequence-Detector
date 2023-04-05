@@ -146,6 +146,8 @@ async def adder_randomised_test(dut):
         ]
     }
     data_str = json.dumps(data)
+    with open("data.json", "w") as f:
+        json.dump(data, f)
     svg = wavedrom.render(data_str)
     svg.saveas("demo1.svg")    
 
@@ -217,6 +219,8 @@ async def adder_randomised_test2(dut):
         ]
     }
     data_str = json.dumps(data)
+    with open("data.json", "w") as f:
+        json.dump(data, f)
     svg = wavedrom.render(data_str)
     svg.saveas("demo2.svg")   
         
